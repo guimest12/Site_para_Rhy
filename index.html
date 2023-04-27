@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("https://rscmb.com.br/wp-content/uploads/fundo-site-home.jpg");
+        background-size: cover;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      h1 {
+        color: pink;
+        text-shadow: 0 0 10px hotpink;
+      }
+      button {
+        margin-top: 20px;
+      }
+      #jogos-site {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Passa_tempos_de_Rhy</h1>
+      <button id="jogos-button">Jogos de Rhy</button>
+      <div id="jogos-site">Site de jogos</div>
+      <button id="animes-button">Animes para Rhy</button>
+      <div id="animes-site">Site de animes</div>
+    </div>
+
+    <script>
+      var jogosButton = document.getElementById("jogos-button");
+      var jogosSite = document.getElementById("jogos-site");
+
+      jogosButton.addEventListener("click", function() {
+        window.open("https://www.jogos360.com.br", "_blank"); // Abrindo em nova guia
+        
+        if (jogosSite.style.display === "none") {
+          jogosSite.style.display = "block";
+        } else {
+          jogosSite.style.display = "none";
+        }
+      });
+
+      var animesButton = document.getElementById("animes-button");
+      var animesSite = document.getElementById("animes-site");
+
+      animesButton.addEventListener("click", function() {
+        window.open("https://animesonlinehd.vip", "_blank"); // Abrindo em nova guia
+        
+        if (animesSite.style.display === "none") {
+          animesSite.style.display = "block";
+        } else {
+          animesSite.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
